@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telecentro - Inclusão Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Barra de Acessibilidade -->
+  <div class="accessibility-bar bg-light py-2">
+    <div class="container d-flex justify-content-end gap-2">
+      <button id="high-contrast-btn" class="btn btn-outline-dark btn-sm" aria-label="Ativar alto contraste">Alto Contraste</button>
+      <button id="increase-font-btn" class="btn btn-outline-dark btn-sm" aria-label="Aumentar o tamanho da fonte">Aumentar Fonte</button>
+      <button id="voice-mode-btn" class="btn btn-outline-dark btn-sm" aria-label="Ativar modo de audição">Ouvir</button>
+    </div>
+  </div>
+
+  <!-- Cabeçalho com Menu -->
+  <header class="header bg-primary text-white py-3">
+    <nav class="container d-flex justify-content-between align-items-center">
+      <a href="#" class="logo text-white text-decoration-none fs-4">Telecentro</a>
+      <ul class="menu list-unstyled d-flex gap-4 m-0">
+        <li><a href="#inicio" class="text-white text-decoration-none">Início</a></li>
+        <li><a href="#sobre" class="text-white text-decoration-none">Sobre</a></li>
+        <li><a href="#cursos" class="text-white text-decoration-none">Cursos</a></li>
+        <li><a href="#ferramentas" class="text-white text-decoration-none">Ferramentas</a></li>
+        <li><a href="#chat" class="text-white text-decoration-none">Chat</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção Inicial -->
+  <section id="inicio" class="py-5 text-center bg-light">
+    <div class="container">
+      <h1 class="text-primary">Bem-vindo ao Telecentro</h1>
+      <p class="lead">Inclusão digital e social para todos os cidadãos de São Paulo.</p>
+      <!-- Caixa de Imagem -->
+      <div class="image-box my-4">
+        <img src="https://placehold.co/600x300" alt="Imagem de pessoas utilizando computadores em um espaço comunitário" class="img-fluid rounded shadow">
+      </div>
+      <a href="#cursos" class="btn btn-primary btn-lg">Conheça nossos cursos</a>
+    </div>
+  </section>
+
+  <!-- Seção Sobre o Telecentro -->
+  <section id="sobre" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center text-primary mb-4">O que é o Telecentro?</h2>
+      <p>
+        O Telecentro é um programa desenvolvido pela Prefeitura de São Paulo com o objetivo de promover 
+        a inclusão digital e social na cidade. O programa consiste na instalação de espaços comunitários 
+        equipados com computadores, acesso à internet e serviços de capacitação digital.
+      </p>
+      <p>
+        Esses espaços oferecem cursos e oficinas gratuitas, ajudando os cidadãos a se conectar com o mundo 
+        digital e melhorar suas oportunidades no mercado de trabalho.
+      </p>
+    </div>
+  </section>
+
+  <!-- Seção de Cursos -->
+<section id="cursos" class="py-5">
+  <div class="container">
+    <h2 class="text-center text-primary mb-4">Cursos Disponíveis</h2>
+
+    <!-- Cursos Online -->
+    <h3 class="text-success text-center mb-3">Cursos Online</h3>
+    <div class="row g-4">
+      <!-- Curso 1: Oficina de Canva -->
+      <div class="col-md-6">
+        <div class="card">
+          <img src="https://placehold.co/600x400" class="card-img-top" alt="Oficina de Canva">
+          <div class="card-body">
+            <h5 class="card-title">Oficina de Canva</h5>
+            <p class="card-text">
+              Aprenda a criar artes digitais, posts para redes sociais, banners, convites e muito mais usando o Canva.
+              Ideal para quem deseja se destacar nas redes sociais ou criar materiais visuais profissionais.
+            </p>
+            <p><strong>Horários:</strong> Segunda, Quarta e Sexta – 09h às 11h</p>
+            <p><strong>Professor:</strong> Arilton</p>
+            <a href="#inscricao" class="btn btn-primary">Inscreva-se</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curso 2: Editor de Planilhas -->
+      <div class="col-md-6">
+        <div class="card">
+          <img src="https://placehold.co/600x400" class="card-img-top" alt="Editor de Planilhas">
+          <div class="card-body">
+            <h5 class="card-title">Editor de Planilhas</h5>
+            <p class="card-text">
+              Domine o uso de planilhas para cálculos, relatórios, gráficos e análise de dados. Aprenda a usar fórmulas,
+              funções e ferramentas avançadas para otimizar seu trabalho.
+            </p>
+            <p><strong>Horários:</strong> Terça e Quinta – 10h às 12h</p>
+            <p><strong>Professor:</strong> Arilton</p>
+            <a href="#inscricao" class="btn btn-primary">Inscreva-se</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cursos Presenciais -->
+    <h3 class="text-primary text-center mt-5 mb-3">Cursos Presenciais</h3>
+    <div class="row g-4">
+      <!-- Curso 3: Elaboração de Currículo -->
+      <div class="col-md-6">
+        <div class="card">
+          <img src="https://placehold.co/600x400" class="card-img-top" alt="Elaboração de Currículo">
+          <div class="card-body">
+            <h5 class="card-title">Elaboração de Currículo</h5>
+            <p class="card-text">
+              Aprenda a criar um currículo profissional e atraente, destacando suas habilidades e experiências.
+              Ideal para quem busca novas oportunidades no mercado de trabalho.
+            </p>
+            <p><strong>Horários:</strong> Terça e Quinta – 09h às 11h</p>
+            <p><strong>Professor:</strong> Luiz Alberto</p>
+            <a href="#inscricao" class="btn btn-primary">Inscreva-se</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curso 4: HTML -->
+      <div class="col-md-6">
+        <div class="card">
+          <img src="https://placehold.co/600x400" class="card-img-top" alt="HTML">
+          <div class="card-body">
+            <h5 class="card-title">HTML</h5>
+            <p class="card-text">
+              Aprenda a desenvolver sites usando HTML e CSS. Este curso é ideal para quem deseja iniciar na área de
+              desenvolvimento web e criar páginas responsivas e modernas.
+            </p>
+            <p><strong>Horários:</strong> Segunda e Quarta – 10h às 12h</p>
+            <p><strong>Professor:</strong> Anderson</p>
+            <a href="#inscricao" class="btn btn-primary">Inscreva-se</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Seção de Cursos Presenciais com Localização -->
+<section id="cursos-presenciais" class="py-5">
+  <div class="container">
+    <h2 class="text-center text-primary mb-4">Cursos Presenciais</h2>
+    <p class="text-center">Escolha o curso, horário e local onde deseja participar.</p>
+
+    <!-- Seção de Inscrição do Candidato -->
+<section id="inscricao" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center text-primary mb-4">Inscrição para Cursos Presenciais</h2>
+    <p class="text-center">Preencha o formulário para garantir sua vaga.</p>
+
+    <!-- Formulário de Inscrição -->
+    <form id="form-inscricao">
+      <div class="row g-3">
+        <!-- Nome Completo -->
+        <div class="col-md-6">
+          <label for="nome" class="form-label">Nome Completo</label>
+          <input type="text" id="nome" class="form-control" placeholder="Digite seu nome completo" required>
+        </div>
+
+        <!-- E-mail -->
+        <div class="col-md-6">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" id="email" class="form-control" placeholder="Digite seu e-mail" required>
+        </div>
+
+        <!-- Telefone -->
+        <div class="col-md-6">
+          <label for="telefone" class="form-label">Telefone</label>
+          <input type="tel" id="telefone" class="form-control" placeholder="(XX) XXXXX-XXXX" required>
+        </div>
+
+        <!-- Curso -->
+        <div class="col-md-6">
+          <label for="curso-selecionado" class="form-label">Selecione o Curso</label>
+          <select id="curso-selecionado" class="form-select" required>
+            <option value="" selected disabled>Escolha um curso</option>
+            <option value="curriculo">Elaboração de Currículo</option>
+            <option value="redes">Criação de Redes Sociais</option>
+            <option value="smartphones">Utilização de Smartphones</option>
+            <option value="html">HTML</option>
+            <option value="mysql">MySQL</option>
+          </select>
+        </div>
+
+        <!-- Horário -->
+        <div class="col-md-6">
+          <label for="horario-selecionado" class="form-label">Selecione o Horário</label>
+          <select id="horario-selecionado" class="form-select" required>
+            <option value="" selected disabled>Escolha um curso primeiro</option>
+          </select>
+        </div>
+
+        <!-- Local -->
+        <div class="col-md-6">
+          <label for="local-selecionado" class="form-label">Selecione o Local</label>
+          <select id="local-selecionado" class="form-select" required>
+            <option value="ceu-vila-atlantica">CEU Vila Atlântica</option>
+            <option value="ceu-perus">CEU Perus</option>
+            <option value="ceu-parque-anhanguera">CEU Parque Anhanguera</option>
+            <option value="ceu-sao-mateus">CEU São Mateus</option>
+          </select>
+        </div>
+
+        <!-- Botão de Envio -->
+        <div class="col-md-12 text-center">
+          <button type="submit" class="btn btn-primary w-50">Confirmar Inscrição</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Mensagem de Confirmação -->
+    <div id="mensagem-sucesso" class="alert alert-success mt-4 text-center" style="display: none;">
+      Inscrição realizada com sucesso! Aguarde nosso contato.
+    </div>
+  </div>
+</section>
+
+<!-- Script para Atualizar Horários e Processar Inscrição -->
+<script>
+  const cursoHorarios = {
+    "curriculo": ["Terça e Quinta – 09h às 11h"],
+    "redes": ["Segunda e Quarta – 14h às 16h"],
+    "smartphones": ["Sexta – 15h às 17h"],
+    "html": ["Segunda e Quarta – 10h às 12h"],
+    "mysql": ["Terça e Quinta – 13h às 15h"]
+  };
+
+  document.getElementById('curso-selecionado').addEventListener('change', function () {
+    let curso = this.value;
+    let horarioSelect = document.getElementById('horario-selecionado');
+    
+    // Limpa os horários anteriores
+    horarioSelect.innerHTML = "";
+    
+    // Adiciona os horários do curso escolhido
+    if (curso in cursoHorarios) {
+      cursoHorarios[curso].forEach(horario => {
+        let option = document.createElement("option");
+        option.value = horario;
+        option.textContent = horario;
+        horarioSelect.appendChild(option);
+      });
+    }
+  });
+
+  document.getElementById('form-inscricao').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let nome = document.getElementById('nome').value;
+    let email = document.getElementById('email').value;
+    let telefone = document.getElementById('telefone').value;
+    let curso = document.getElementById('curso-selecionado').value;
+    let horario = document.getElementById('horario-selecionado').value;
+    let local = document.getElementById('local-selecionado').value;
+
+    // Exibir mensagem de sucesso
+    document.getElementById('mensagem-sucesso').style.display = 'block';
+
+    // Resetar o formulário
+    document.getElementById('form-inscricao').reset();
+    
+    // Limpar horários ao resetar
+    document.getElementById('horario-selecionado').innerHTML = "<option value='' selected disabled>Escolha um curso primeiro</option>";
+  });
+</script>
+
+
+<!-- Script para Manipular Inscrição -->
+<script>
+  document.getElementById('form-inscricao').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let nome = document.getElementById('nome').value;
+    let email = document.getElementById('email').value;
+    let telefone = document.getElementById('telefone').value;
+    let curso = document.getElementById('curso-selecionado').value;
+    let horario = document.getElementById('horario-selecionado').value;
+    let local = document.getElementById('local-selecionado').value;
+
+    // Exibir mensagem de sucesso
+    document.getElementById('mensagem-sucesso').style.display = 'block';
+
+    // Resetar o formulário
+    document.getElementById('form-inscricao').reset();
+  });
+</script>
+
+
+<!-- Seção de Localização -->
+<section id="localizacao" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center text-primary mb-4">Localização dos Telecentros</h2>
+    <div id="map" style="height: 400px; width: 100%;"></div>
+  </div>
+</section>
+
+<!-- Script do Google Maps -->
+<script>
+  function initMap() {
+    const saoPaulo = { lat: -23.5505, lng: -46.6333 }; // Coordenadas de São Paulo
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 11,
+      center: saoPaulo,
+    });
+
+    // Marcadores dos Telecentros
+    const telecentros = [
+      { nome: "CEU Vila Atlântica", lat: -23.4805, lng: -46.7275 },
+      { nome: "CEU Perus", lat: -23.4056, lng: -46.7644 },
+      { nome: "CEU Parque Anhanguera", lat: -23.4972, lng: -46.7808 },
+      { nome: "CEU São Mateus", lat: -23.6028, lng: -46.4819 },
+    ];
+
+    telecentros.forEach((telecentro) => {
+      new google.maps.Marker({
+        position: { lat: telecentro.lat, lng: telecentro.lng },
+        map: map,
+        title: telecentro.nome,
+      });
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_API&callback=initMap" async defer></script>
+
+<!-- Script para Manipular Escolhas -->
+<script>
+  document.getElementById('curso-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    let curso = document.getElementById('curso-selecionado').value;
+    let horario = document.getElementById('horario-selecionado').value;
+    let local = document.getElementById('local-selecionado').value;
+    alert(`Inscrição realizada com sucesso!\nCurso: ${curso}\nHorário: ${horario}\nLocal: ${local}`);
+  });
+</script>
+
+
+  <!-- Seção de Ferramentas para Aulas Online -->
+  <section id="ferramentas" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center text-primary mb-4">Ferramentas para Aulas Online</h2>
+      <p class="text-center">Acesse sua sala de aula online através das ferramentas mais populares:</p>
+      <div class="d-flex justify-content-center gap-4">
+        <a href="https://zoom.us" target="_blank" class="btn btn-outline-primary">Zoom</a>
+        <a href="https://meet.google.com" target="_blank" class="btn btn-outline-success">Google Meet</a>
+        <a href="https://www.microsoft.com/pt-br/microsoft-teams/" target="_blank" class="btn btn-outline-info">Microsoft Teams</a>
+      </div>
+    </div>
+  </section>
+
+  <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO_DE_TELEFONE&text=Olá, gostaria de obter mais informações sobre o Telecentro." target="_blank">
+    <button class="btn btn-success">Fale Conosco no WhatsApp</button>
+</a>
+
+  <!-- Seção de Chat -->
+  <section id="chat" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center text-primary mb-4">Chat Online</h2>
+      <div class="chat-box border p-3 bg-white rounded shadow">
+        <div id="messages" class="messages mb-3" style="height: 200px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;" aria-live="polite">
+          <!-- Mensagens aparecem aqui -->
+        </div>
+        <form id="chat-form" class="d-flex gap-2" aria-label="Formulário de Chat">
+          <input type="text" id="user-message" class="form-control" placeholder="Digite sua mensagem..." required aria-label="Mensagem">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer bg-primary text-white text-center py-3 mt-4">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Telecentro. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Modo Ouvir (Acessibilidade)
+    document.getElementById('voice-mode-btn').addEventListener('click', function () {
+      let text = document.body.innerText;
+      let speech = new SpeechSynthesisUtterance(text);
+      speech.lang = "pt-BR";
+      window.speechSynthesis.speak(speech);
+    });
+
+    // Modo Alto Contraste
+    document.getElementById('high-contrast-btn').addEventListener('click', () => {
+      document.body.classList.toggle('high-contrast');
+    });
+
+    // Aumento de Fonte
+    document.getElementById('increase-font-btn').addEventListener('click', () => {
+      document.body.classList.toggle('large-font');
+    });
+
+    
+    // Funcionalidade do Chat
+    document.getElementById('chat-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      const messageInput = document.getElementById('user-message');
+      const messageText = messageInput.value.trim();
+      const messageBox = document.getElementById('messages');
+
+      if (messageText !== "") {
+        const newMessage = document.createElement('div');
+        newMessage.textContent = "Você: " + messageText;
+        newMessage.classList.add('mb-2', 'p-2', 'bg-primary', 'text-white', 'rounded');
+        messageBox.appendChild(newMessage);
+
+        messageInput.value = '';
+        messageBox.scrollTop = messageBox.scrollHeight;
+      }
+    });
+    
+  </script>
+</body>
+</html>
+
+  
