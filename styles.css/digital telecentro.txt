@@ -108,7 +108,7 @@
         <div class="col-md-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">HTML</h5>
+              <h5 class="card-title">HTML5</h5>
               <p class="card-text">Aprenda a desenvolver sites com HTML e CSS.</p>
               <p><strong>Horários:</strong> Segunda e Quarta – 10h às 12h</p>
               <p><strong>Professor:</strong> Anderson</p>
@@ -134,7 +134,7 @@
             <option value="curriculo">Elaboração de Currículo</option>
             <option value="redes">Criação de Redes Sociais</option>
             <option value="smartphones">Utilização de Smartphones</option>
-            <option value="html">HTML</option>
+            <option value="html">HTML5</option>
             <option value="mysql">MySQL</option>
           </select>
         </div>
