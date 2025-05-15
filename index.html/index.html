@@ -301,42 +301,52 @@
   </div>
 </section>
 
-<!-- Script do Google Maps -->
+<!-- Seção de Localização -->
+<section id="localizacao" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center text-primary mb-4">Localização dos Telecentros</h2>
+    <div id="map" style="height: 400px; width: 100%;"></div>
+  </div>
+</section>
+
+<!-- Estilo do Leaflet -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-sA+4+CyKXFdYyQEGH0TFlVZZW0LmB3zF1y7GS4BfqOg="
+  crossorigin=""
+/>
+
+<!-- Script do Leaflet -->
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-o9N1jNp0GL1kWm8a6xbrkZqNP01+rlmAMvWxu+3Sf2M="
+  crossorigin=""
+></script>
+
 <script>
-  function initMap() {
-    const saoPaulo = { lat: -23.5505, lng: -46.6333 }; // Coordenadas de São Paulo
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 11,
-      center: saoPaulo,
-    });
+  // Inicializa o mapa
+  const map = L.map('map').setView([-23.5505, -46.6333], 11); // São Paulo
 
-    // Marcadores dos Telecentros
-    const telecentros = [
-      { nome: "CEU Vila Atlântica", lat: -23.4805, lng: -46.7275 },
-      { nome: "CEU Perus", lat: -23.4056, lng: -46.7644 },
-      { nome: "CEU Parque Anhanguera", lat: -23.4972, lng: -46.7808 },
-      { nome: "CEU São Mateus", lat: -23.6028, lng: -46.4819 },
-    ];
+  // Camada base do mapa (OpenStreetMap)
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(map);
 
-    telecentros.forEach((telecentro) => {
-      new google.maps.Marker({
-        position: { lat: telecentro.lat, lng: telecentro.lng },
-        map: map,
-        title: telecentro.nome,
-      });
-    });
-  }
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_API&callback=initMap" async defer></script>
+  // Lista dos Telecentros
+  const telecentros = [
+    { nome: "CEU Vila Atlântica", lat: -23.4805, lng: -46.7275 },
+    { nome: "CEU Perus", lat: -23.4056, lng: -46.7644 },
+    { nome: "CEU Parque Anhanguera", lat: -23.4972, lng: -46.7808 },
+    { nome: "CEU São Mateus", lat: -23.6028, lng: -46.4819 },
+  ];
 
-<!-- Script para Manipular Escolhas -->
-<script>
-  document.getElementById('curso-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    let curso = document.getElementById('curso-selecionado').value;
-    let horario = document.getElementById('horario-selecionado').value;
-    let local = document.getElementById('local-selecionado').value;
-    alert(`Inscrição realizada com sucesso!\nCurso: ${curso}\nHorário: ${horario}\nLocal: ${local}`);
+  // Adiciona os marcadores no mapa
+  telecentros.forEach((local) => {
+    L.marker([local.lat, local.lng])
+      .addTo(map)
+      .bindPopup(`<strong>${local.nome}</strong>`);
   });
 </script>
 
