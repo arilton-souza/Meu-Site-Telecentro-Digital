@@ -301,7 +301,7 @@
   </div>
 </section>
 
-<!-- Estilo do Leaflet -->
+<!-- Leaflet CSS -->
 <link
   rel="stylesheet"
   href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -309,36 +309,45 @@
   crossorigin=""
 />
 
-<!-- Script do Leaflet -->
+<!-- Leaflet JS -->
 <script
   src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
   integrity="sha256-o9N1jNp0GL1kWm8a6xbrkZqNP01+rlmAMvWxu+3Sf2M="
   crossorigin=""
 ></script>
 
+<!-- Script de inicialização do mapa -->
 <script>
-  // Inicializa o mapa
-  const map = L.map('map').setView([-23.5505, -46.6333], 11); // São Paulo
+  const mapa = L.map('map').setView([-23.5015, -46.7217], 12); // Região de São Paulo
 
-  // Camada base do mapa (OpenStreetMap)
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  }).addTo(map);
+    attribution: '© OpenStreetMap contribuidores'
+  }).addTo(mapa);
 
-  // Lista dos Telecentros
+  // Marcadores dos Telecentros
   const telecentros = [
-    { nome: "CEU Vila Atlântica", lat: -23.4805, lng: -46.7275 },
-    { nome: "CEU Perus", lat: -23.4056, lng: -46.7644 },
-    { nome: "CEU Parque Anhanguera", lat: -23.4972, lng: -46.7808 },
-    { nome: "CEU São Mateus", lat: -23.6028, lng: -46.4819 },
+    {
+      nome: "CEU Vila Atlântica",
+      coords: [-23.505417, -46.763249]
+    },
+    {
+      nome: "CEU Perus",
+      coords: [-23.401204, -46.740073]
+    },
+    {
+      nome: "CEU Parque Anhanguera",
+      coords: [-23.440284, -46.744664]
+    },
+    {
+      nome: "CEU São Mateus",
+      coords: [-23.588990, -46.443032]
+    }
   ];
 
-  // Adiciona os marcadores no mapa
-  telecentros.forEach((local) => {
-    L.marker([local.lat, local.lng])
-      .addTo(map)
-      .bindPopup(`<strong>${local.nome}</strong>`);
+  telecentros.forEach(telecentro => {
+    L.marker(telecentro.coords)
+      .addTo(mapa)
+      .bindPopup(`<strong>${telecentro.nome}</strong>`);
   });
 </script>
 
